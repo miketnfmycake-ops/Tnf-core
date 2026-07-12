@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TNF Core | Audiobook Narration & Production Studio</title>
+<meta name="description" content="TNF Core turns manuscripts into professionally narrated audiobooks. Voice casting, studio recording, and ACX/Audible-spec mastering, delivered in weeks.">
+<link rel="canonical" href="https://www.tnfcore.com/">
+
+<!-- Open Graph: controls how the link looks when shared on Facebook, LinkedIn, iMessage, etc -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="TNF Core | Audiobook Narration & Production Studio">
+<meta property="og:description" content="Manuscript to narrated audiobook: casting, recording, editing, and mastering to platform spec.">
+<meta property="og:url" content="https://www.tnfcore.com/">
+<meta property="og:image" content="https://www.tnfcore.com/og-image.jpg">
+
+<!-- Twitter/X card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TNF Core | Audiobook Narration & Production Studio">
+<meta name="twitter:description" content="Manuscript to narrated audiobook: casting, recording, editing, and mastering to platform spec.">
+<meta name="twitter:image" content="https://www.tnfcore.com/og-image.jpg">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,600;0,6..72,700;1,6..72,500&family=Inter:wght@400;500;600&display=swap');
+
+  :root{
+    --ink: #15130F;
+    --ink-soft: #201D17;
+    --parchment: #F1E9DC;
+    --amber: #E3A857;
+    --teal: #3E7B7E;
+    --grey: #8C8577;
+    --line: #33302A;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+
+  body{
+    background:var(--ink);
+    color:var(--parchment);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+  }
+
+  h1,h2,h3{
+    font-family:'Newsreader', serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+
+  a{ color:inherit; }
+
+  header{
+    padding:1.6rem 6vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid var(--line);
+  }
+
+  .brand{
+    font-family:'Newsreader', serif;
+    font-weight:700;
+    font-size:1.35rem;
+  }
+
+  nav a{
+    text-decoration:none;
+    margin-left:2rem;
+    font-size:0.92rem;
+    color:var(--parchment);
+    opacity:0.85;
+  }
+  nav a:hover{ opacity:1; }
+
+  a:focus-visible, .btn:focus-visible{
+    outline:2px solid var(--amber);
+    outline-offset:3px;
+  }
+
+  /* --- hero with waveform signature --- */
+  .hero{
+    padding:5.5rem 6vw 4rem;
+    max-width:680px;
+  }
+
+  .eyebrow{
+    font-size:0.82rem;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    color:var(--amber);
+    margin-bottom:1.1rem;
+  }
+
+  .hero h1{
+    font-size:clamp(2.3rem, 4.8vw, 3.4rem);
+    line-height:1.12;
+    margin-bottom:1.3rem;
+  }
+
+  .hero h1 em{
+    font-style:italic;
+    color:var(--amber);
+  }
+
+  .hero p{
+    font-size:1.08rem;
+    max-width:46ch;
+    margin-bottom:2.2rem;
+    color:#c9bfae;
+  }
+
+  .btn{
+    display:inline-block;
+    background:var(--amber);
+    color:var(--ink);
+    padding:0.85rem 1.8rem;
+    border-radius:2px;
+    text-decoration:none;
+    font-size:0.95rem;
+    font-weight:600;
+    transition:transform 0.15s ease;
+  }
+  .btn:hover{ transform:translateY(-1px); }
+
+  .waveform{
+    display:flex;
+    align-items:flex-end;
+    gap:3px;
+    height:48px;
+    margin:2.5rem 0 0;
+  }
+  .waveform span{
+    display:block;
+    width:4px;
+    background:var(--teal);
+    border-radius:1px;
+    opacity:0.8;
+  }
+
+  /* --- process, real sequence so numbers are justified --- */
+  .process{
+    padding:4rem 6vw;
+    border-top:1px solid var(--line);
+  }
+  .process h2{
+    font-size:1.6rem;
+    margin-bottom:2.5rem;
+  }
+  .steps{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:2rem;
+  }
+  .step .num{
+    font-family:'Newsreader', serif;
+    font-style:italic;
+    color:var(--teal);
+    font-size:1.6rem;
+    display:block;
+    margin-bottom:0.6rem;
+  }
+  .step h3{
+    font-size:1.05rem;
+    margin-bottom:0.4rem;
+  }
+  .step p{
+    font-size:0.92rem;
+    color:var(--grey);
+  }
+
+  /* --- samples --- */
+  .samples{
+    padding:4rem 6vw;
+    border-top:1px solid var(--line);
+    background:var(--ink-soft);
+  }
+  .samples h2{ font-size:1.6rem; margin-bottom:2rem; }
+  .sample-list{ display:flex; flex-direction:column; gap:1px; background:var(--line); }
+  .sample{
+    background:var(--ink-soft);
+    padding:1.2rem 1.4rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    font-size:0.95rem;
+  }
+  .sample .title{ font-weight:500; }
+  .sample .meta{ color:var(--grey); font-size:0.85rem; }
+  .play{
+    width:34px; height:34px;
+    border:1px solid var(--teal);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    flex-shrink:0;
+    color:var(--teal);
+    font-size:0.75rem;
+  }
+
+  footer{
+    border-top:1px solid var(--line);
+    padding:2.5rem 6vw;
+    font-size:0.85rem;
+    color:var(--grey);
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:1rem;
+  }
+
+  @media (max-width:800px){
+    .steps{ grid-template-columns:1fr 1fr; }
+  }
+  @media (max-width:600px){
+    .steps{ grid-template-columns:1fr; }
+    header{ flex-direction:column; gap:1rem; align-items:flex-start; }
+    nav a{ margin-left:0; margin-right:1.5rem; }
+    .sample{ flex-wrap:wrap; gap:0.6rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .btn{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">TNF Core</div>
+    <nav>
+      <a href="#process">Process</a>
+      <a href="#samples">Samples</a>
+      <a href="mailto:miketnfmycake@gmail.com">Get a quote</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">Manuscript to narrated audiobook</div>
+    <h1>Your book, read aloud <em>properly</em>.</h1>
+    <p>We cast the right voice, record in a treated studio, and master to Audible and ACX spec — so you upload once and it's accepted.</p>
+    <a href="#process" class="btn">See how it works</a>
+    <div class="waveform" aria-hidden="true">
+      <span style="height:20%"></span><span style="height:45%"></span><span style="height:70%"></span>
+      <span style="height:35%"></span><span style="height:90%"></span><span style="height:55%"></span>
+      <span style="height:30%"></span><span style="height:65%"></span><span style="height:40%"></span>
+      <span style="height:80%"></span><span style="height:25%"></span><span style="height:60%"></span>
+      <span style="height:45%"></span><span style="height:75%"></span><span style="height:35%"></span>
+      <span style="height:50%"></span><span style="height:20%"></span><span style="height:85%"></span>
+    </div>
+  </section>
+
+  <section class="process" id="process">
+    <h2>Four stages, start to finish</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <h3>Casting</h3>
+        <p>Three voice options based on genre and tone, auditioned against your first chapter.</p>
+      </div>
+      <div class="step">
+        <span class="num">02</span>
+        <h3>Recording</h3>
+        <p>Full narration in a treated booth, directed for pacing and character consistency.</p>
+      </div>
+      <div class="step">
+        <span class="num">03</span>
+        <h3>Editing</h3>
+        <p>Breath removal, pickup fixes, and pacing edits, chapter by chapter.</p>
+      </div>
+      <div class="step">
+        <span class="num">04</span>
+        <h3>Mastering</h3>
+        <p>Levels and noise floor set to platform spec, delivered as final files.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="samples" id="samples">
+    <h2>Recent narrations</h2>
+    <div class="sample-list">
+      <div class="sample">
+        <div>
+          <div class="title">The Long Ferry</div>
+          <div class="meta">Literary fiction — narrated by Dara Voss</div>
+        </div>
+        <div class="play">▶</div>
+      </div>
+      <div class="sample">
+        <div>
+          <div class="title">Cold Case: Harbor Street</div>
+          <div class="meta">Mystery — narrated by Miles Okafor</div>
+        </div>
+        <div class="play">▶</div>
+      </div>
+      <div class="sample">
+        <div>
+          <div class="title">Nine Small Machines</div>
+          <div class="meta">Nonfiction — narrated by Priya Chandran</div>
+        </div>
+        <div class="play">▶</div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <span>TNF Core — <a href="mailto:miketnfmycake@gmail.com">miketnfmycake@gmail.com</a> — quotes within 2 business days</span>
+  </footer>
+
+</body>
+</html>
